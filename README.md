@@ -1,100 +1,155 @@
-# BruhLang
+<h1 align="center">🔥 BruhLang</h1>
 
-A modern programming language designed for simplicity and expressiveness.
+<p align="center">Programming Made Epic - A programming language that speaks your language.</p>
 
-## Features
+<div align="center">
+  <img src="https://img.shields.io/badge/status-active-success.svg" alt="Status">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
+</div>
 
-- Simple and intuitive syntax
-- Strong type system
-- Modern web-based IDE
-- Real-time compilation and execution
-- Built-in error handling and debugging
+<h2 align="center">🚀 Features</h2>
 
-## Project Structure
+<div align="center">
+  <table>
+    <tr>
+      <td>🗣️ <b>Natural Syntax</b></td>
+      <td>Write code that reads like a casual conversation</td>
+    </tr>
+    <tr>
+      <td>🎯 <b>Zero Cap</b></td>
+      <td>Use <code>cap</code> and <code>nocap</code> for boolean values</td>
+    </tr>
+    <tr>
+      <td>🔄 <b>Flex Loops</b></td>
+      <td>Loop with <code>yoRepeat</code> for cleaner iterations</td>
+    </tr>
+    <tr>
+      <td>💬 <b>Say It Out</b></td>
+      <td>Use <code>say</code> instead of console.log</td>
+    </tr>
+  </table>
+</div>
 
-```
-BruhLang/
-├── compiler/                 # Core language implementation
-│   ├── lexer.js             # Tokenization
-│   ├── parser.js            # AST generation
-│   ├── analyzer.js          # Semantic analysis
-│   └── generator.js         # Code generation
-├── backend/                 
-│   ├── server.js            # Express server
-│   ├── routes/              # API routes
-│   └── middleware/          # Custom middleware
-├── frontend/
-│   ├── src/
-│   │   ├── components/      # React components
-│   │   ├── hooks/           # Custom hooks
-│   │   ├── styles/          # CSS modules
-│   │   └── utils/           # Helper functions
-│   └── public/              # Static assets
-└── examples/                # Example programs
-```
+<h2 align="center">📚 Quick Start</h2>
 
-## Language Syntax
+<pre>
+<code>
+# Clone the repository
+git clone https://github.com/muffakiribnhamid/BruhLang.git
 
-```bruh
-// Variables
-let x = 42;
-const PI = 3.14;
+# Navigate to project directory
+cd BruhLang
 
-// Functions
-fn add(a: number, b: number): number {
-    return a + b;
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+</code>
+</pre>
+
+<h2 align="center">🎮 Code Examples</h2>
+
+<h3>Variables and Data Types</h3>
+<pre>
+<code>
+// JavaScript
+let name = "John";
+let age = 25;
+let isActive = true;
+
+// BruhLang
+flex name = "John"
+flex age = 25
+flex isActive = cap
+</code>
+</pre>
+
+<h3>Functions</h3>
+<pre>
+<code>
+// JavaScript
+function greet(name) {
+  console.log("Hello " + name);
 }
 
-// Control Flow
-if (condition) {
-    // code
-} else {
-    // code
+// BruhLang
+flex greet = (name) fam
+  say "Hello " + name
+yo
+</code>
+</pre>
+
+<h3>Loops</h3>
+<pre>
+<code>
+// JavaScript
+for (let i = 0; i < 5; i++) {
+  console.log(i);
 }
 
-// Loops
-for (let i = 0; i < 10; i++) {
-    // code
-}
+// BruhLang
+yoRepeat 5 fam
+  say i
+yo
+</code>
+</pre>
 
-// Classes
-class Person {
-    name: string;
-    age: number;
-    
-    constructor(name: string, age: number) {
-        this.name = name;
-        this.age = age;
-    }
-    
-    greet(): string {
-        return "Hello, I'm ${this.name}!";
-    }
-}
-```
+<h2 align="center">🛠️ Tech Stack</h2>
 
-## Getting Started
+<div align="center">
+  <table>
+    <tr>
+      <td>⚛️ React</td>
+      <td>⚡ Vite</td>
+      <td>🎨 Framer Motion</td>
+    </tr>
+    <tr>
+      <td>🎯 TailwindCSS</td>
+      <td>📦 React Icons</td>
+    </tr>
+  </table>
+</div>
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   cd frontend && npm install
-   cd ../backend && npm install
-   ```
-3. Start the development server:
-   ```bash
-   # Start backend
-   cd backend && npm run dev
-   
-   # Start frontend (in another terminal)
-   cd frontend && npm run dev
-   ```
+<h2 align="center">📖 Documentation</h2>
 
-## Contributing
+<div align="center">
+  <h3>Key Concepts</h3>
+  <ul>
+    <li>Language Syntax</li>
+    <li>Built-in Functions</li>
+    <li>Control Structures</li>
+    <li>Data Types</li>
+    <li>Best Practices</li>
+  </ul>
+</div>
 
-Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
+<h2 align="center">🤝 Contributing</h2>
 
-## License
+<div align="center">
+  <p>Contributions are welcome! Please follow these steps:</p>
+  <ol>
+    <li>Fork the repository</li>
+    <li>Create your feature branch</li>
+    <li>Commit your changes</li>
+    <li>Push to the branch</li>
+    <li>Open a Pull Request</li>
+  </ol>
+</div>
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+<h2 align="center">📜 License</h2>
+
+<div align="center">
+  <p>This project is licensed under the MIT License</p>
+</div>
+
+<h2 align="center">👨‍💻 Author</h2>
+
+<div align="center">
+  <p><b>Muffakir Ibn Hamid</b></p>
+</div>
+
+<div align="center">
+  <h2>🌟 Show your support</h2>
+  <p>Give a ⭐️ if this project helped you!</p>
+</div>
