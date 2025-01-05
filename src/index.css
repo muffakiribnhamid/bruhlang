@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme */
+  --primary-light: #FF0080;
+  --primary-dark-light: #FF0080;
+  --secondary-light: #7928CA;
+  --accent-light: #00DFD8;
+  --background-light: #ffffff;
+  --foreground-light: #171717;
+  --card-light: #f5f5f5;
+  --card-hover-light: #e5e5e5;
+
+  /* Dark theme */
+  --primary-dark: #FF0080;
+  --primary-dark-dark: #FF0080;
+  --secondary-dark: #7928CA;
+  --accent-dark: #00DFD8;
+  --background-dark: #171717;
+  --foreground-dark: #ffffff;
+  --card-dark: #262626;
+  --card-hover-dark: #404040;
+}
+
+/* Light theme variables */
+:root {
+  --primary: var(--primary-light);
+  --primary-dark: var(--primary-dark-light);
+  --secondary: var(--secondary-light);
+  --accent: var(--accent-light);
+  --background: var(--background-light);
+  --foreground: var(--foreground-light);
+  --card: var(--card-light);
+  --card-hover: var(--card-hover-light);
+}
+
+/* Dark theme variables */
+:root.dark {
+  --primary: var(--primary-dark);
+  --primary-dark: var(--primary-dark-dark);
+  --secondary: var(--secondary-dark);
+  --accent: var(--accent-dark);
+  --background: var(--background-dark);
+  --foreground: var(--foreground-dark);
+  --card: var(--card-dark);
+  --card-hover: var(--card-hover-dark);
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  /* Monaco Editor customizations */
+  .monaco-editor {
+    padding-top: 0.5rem;
+  }
+
+  /* Split.js gutter customizations */
+  .gutter {
+    background-repeat: no-repeat;
+    background-position: 50%;
+  }
+
+  .gutter.gutter-vertical {
+    cursor: row-resize;
+  }
+
+  .gutter.gutter-horizontal {
+    cursor: col-resize;
+  }
+
+  /* Scrollbar customizations */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1F2937;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4B5563;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6B7280;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Modern grid background */
+.grid-bg {
+  background-image: radial-gradient(var(--foreground) 1px, transparent 0);
+  background-size: 40px 40px;
+  opacity: 0.03;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
+}
+
+.dark .glass-effect {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gradient-border {
+  background: linear-gradient(var(--background), var(--background)) padding-box,
+              linear-gradient(45deg, var(--primary), var(--secondary)) border-box;
+  border: 2px solid transparent;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px var(--primary),
+                0 0 20px var(--primary),
+                0 0 30px var(--secondary);
+  }
+  to {
+    box-shadow: 0 0 20px var(--primary),
+                0 0 30px var(--primary),
+                0 0 40px var(--secondary);
+  }
+}
+
+/* Smooth scrolling */
+.snap-y {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.snap-y::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.snap-y {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-hover);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Code block styles */
+.code-window {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.code-window:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
