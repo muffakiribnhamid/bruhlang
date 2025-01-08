@@ -6,7 +6,6 @@ import './App.css';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     setIsVisible(true);
   }, []);
